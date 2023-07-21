@@ -1,0 +1,74 @@
+/*
+  color helper functions
+*/
+
+@function contrast($color) {
+  @if (lightness($color) > 40) {
+    @return color(white);
+  }
+  @return color(black);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
+/*
+  initial colors
+*/
+
+$color-indigo: #11053c;
+$color-teal: #09aca2;
+$color-slate: #63637e;
+
+
+/*
+  color by name
+*/
+
+$colors: (
+  primary: $color-indigo,
+  accent: $color-teal,
+  black: shade($color-slate, 40%),
+  white: tint($color-slate, 99%),
+
+  neutral: (
+    1: tint($color-slate, 93%),
+    2: tint($color-slate, 82%),
+    3: tint($color-slate, 70%),
+    4: $color-slate,
+  ),
+);
+
+
+/*
+  color accessor function
+*/
+
+@function color($keys...) {
+  $value: $colors;
+
+  @if length($keys) == 1 {
+    @if nth($keys, 1) == neutral { @return color(neutral, 4); }
+  }
+
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+
+  @return $value;
+}
+
+
+/*
+  color by element property
+*/
+
+$colors: map-merge($colors, (
+  border: color(neutral, 3),
+));

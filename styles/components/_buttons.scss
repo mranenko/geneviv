@@ -1,0 +1,74 @@
+/*
+  default buttons
+*/
+
+.button {
+  @include background(color(primary), color(white));
+  @include size(auto, 3rem);
+  align-items: center;
+  border: 0;
+  border-radius: .5rem;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-family: font(text, family);
+  font-weight: font(strong, weight);
+  gap: .5rem;
+  justify-content: center;
+  line-height: 1rem;
+  padding: 0 2rem;
+  white-space: nowrap;
+}
+
+.button.neutral {
+  @include background(color(neutral), color(white));
+}
+
+.button.white {
+  @include background(color(white), color(primary));
+}
+
+
+/*
+  large download buttons
+*/
+
+.button.large {
+  gap: .75rem;
+  height: 4rem;
+}
+
+.button.large i {
+  font-size: 2.5rem;
+}
+
+.button.large .label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  gap: .125rem;
+  text-align: left;
+}
+
+
+/*
+  link buttons
+*/
+
+.button.link {
+  @include background(none, color(primary));
+  @include size(auto, 2.5rem);
+  padding: 0;
+}
+
+
+/*
+  button row
+*/
+
+.button-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

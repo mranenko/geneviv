@@ -1,0 +1,49 @@
+input[type="text"],
+input.text,
+.input.text,
+textarea,
+.textarea {
+  background: color(neutral, 2);
+  border: 0;
+  border-radius: .5rem;
+  color: color(black);
+  font: inherit;
+  padding: 1rem;
+  width: 100%;
+}
+
+input[type="text"],
+input.text,
+.input.text {
+  height: 3rem;
+  line-height: 1rem;
+}
+
+label,
+.label {
+  font-size: font(small, size);
+  font-weight: font(small, weight);
+}
+
+textarea,
+.textarea {
+  height: 6.5rem;
+  resize: none;
+}
+
+
+/*
+  input groups (e.g. label + input) and input rows (e.g. input + button)
+*/
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
