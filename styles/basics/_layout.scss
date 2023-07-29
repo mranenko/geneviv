@@ -1,32 +1,14 @@
-#main {
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
   align-items: center;
   display: flex;
-  min-height: 100vh;
 }
 
-#main .logo {
-  @include size(100%, auto);
-  max-width: 20rem;
-}
-
-.content {
-  margin: 0 auto;
-  max-width: 75rem;
-  padding: 3rem 3rem 3rem 5rem;
-  width: 100%;
-}
-
-
-#main .content {
-  display: flex;
-  flex-direction: column;
+main .content {
   gap: 1.5rem;
   justify-content: center;
-}
-
-
-@media (min-width: 75rem) {
-  .content {
-    padding: 3rem 2rem 3rem 5rem;
-  }
 }
