@@ -1,6 +1,14 @@
-@mixin background($background, $color: contrast($background)) {
+@mixin background($background, $color: inherit) {
   background: $background;
   color: $color;
+}
+
+@mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  bottom: $bottom;
+  left: $left;
+  position: $position;
+  right: $right;
+  top: $top;
 }
 
 @mixin size($width, $height: $width) {

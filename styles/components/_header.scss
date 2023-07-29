@@ -1,6 +1,22 @@
+:root {
+  --header-height: 6rem;
+  --header-nav-height: 100vh;
+  --header-nav-width: 16rem;
+}
+
+@media (min-width: 50rem) {
+  :root {
+    --header-height: 8rem;
+    --header-nav-height: auto;
+    --header-nav-width: auto;
+  }
+}
+
+
 header {
   @include background(color(white), color(primary));
   box-shadow: 0 0 1rem 0 rgba(color(black), 0.15);
+  height: var(--header-height);
 }
 
 header .content {
@@ -14,20 +30,64 @@ header .logo {
   @include size(auto, 2rem);
 }
 
+
+/*
+  navigation
+*/
+
 header .nav {
-  display: none;
-  gap: 1.5rem;
+  @include background(color(neutral), color(white));
+  @include position(fixed, 0, #{calc(-1*var(--header-nav-width))});
+  @include size(#{var(--header-nav-width)}, #{var(--header-nav-height)});
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: #{calc(var(--header-height) + 2rem) 0 0};
   text-transform: uppercase;
+  transition: right .5s;
+  z-index: 1;
+
+  a {
+    padding: .5rem 2rem;
+    width: 100%;
+  }
+
+  a:hover {
+    @include background(color(neutral, 3), color(black));
+  }
+}
+
+header .nav.active {
+  right: 0;
 }
 
 header .nav-toggle {
+  @include position(fixed, 2rem, 2rem);
+  color: color(primary);
   font-size: 2rem;
+  transition: color .5s;
+  z-index: 2;
 }
 
+header .nav-toggle.active {
+  color: color(white);
+}
 
 @media (min-width: 50rem) {
-  header .nav {
-    display: flex;
+  header .nav,
+  header .nav.active {
+    @include background(none, inherit);
+    @include position(relative);
+    @include size(auto);
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0;
+
+    a, a:hover {
+      @include background(none, inherit);
+      padding: 0;
+      width: auto;
+    }
   }
 
   header .nav-toggle {
