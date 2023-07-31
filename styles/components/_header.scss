@@ -1,6 +1,6 @@
 :root {
   --header-height: 6rem;
-  --header-nav-height: 100vh;
+  --header-nav-height: 100%;
   --header-nav-width: 16rem;
 }
 
@@ -15,8 +15,9 @@
 
 header {
   @include background(color(white), color(primary));
+  @include position(fixed, 0);
+  @include size(100%, var(--header-height));
   box-shadow: 0 0 1rem 0 rgba(color(black), 0.15);
-  height: var(--header-height);
   z-index: 1;
 }
 

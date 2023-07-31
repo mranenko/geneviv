@@ -1,12 +1,8 @@
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 main {
   @include background(color(white), color(black));
   display: flex;
   flex-direction: column;
+  padding: var(--header-height) 0 0;
 }
 
 main .content {
