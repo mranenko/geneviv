@@ -1,0 +1,12 @@
+.page.index {
+  .section.hero .logo {
+    @include size(auto, 7.5rem);
+  }
+}
+
+
+.page.ebook {
+  .section.table-of-contents {
+    min-height: 25rem;
+  }
+}

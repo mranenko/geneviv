@@ -76,10 +76,11 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle {
   font-family: Glory, sans-serif;
   font-weight: 500;
   line-height: 1.25;
-  margin: 0 0 0.5rem;
+  margin: 0;
 }
 
 h1, h2 {
+  color: #11053c;
   text-transform: uppercase;
 }
 
@@ -123,7 +124,7 @@ ul li {
 }
 
 hr {
-  border: 0 solid #d0d0d8;
+  border: 0 solid #d8d8df;
   border-width: 1px 0 0;
   margin: 2rem 0;
 }
@@ -134,13 +135,15 @@ body {
 }
 
 main {
-  align-items: center;
+  background: #fdfdfe;
+  color: #3b3b4c;
   display: flex;
+  flex-direction: column;
 }
 
 main .content {
+  align-items: start;
   gap: 1.5rem;
-  justify-content: center;
 }
 
 /*
@@ -192,6 +195,13 @@ main .content {
 
 .inline-block {
   display: inline-block;
+}
+
+/*
+  color
+*/
+.color-white {
+  color: #fdfdfe;
 }
 
 /*
@@ -335,14 +345,18 @@ main .content {
   padding: 0;
 }
 
+.button.link.white {
+  color: #fdfdfe;
+}
+
 /*
   button row
 */
 .button-row {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 :root {
@@ -423,6 +437,7 @@ header {
   color: #11053c;
   box-shadow: 0 0 1rem 0 rgba(59, 59, 76, 0.15);
   height: var(--header-height);
+  z-index: 1;
 }
 
 header .content {
@@ -463,7 +478,7 @@ header .nav a {
   width: 100%;
 }
 header .nav a:hover {
-  background: #d0d0d8;
+  background: #d8d8df;
   color: #3b3b4c;
 }
 
@@ -520,10 +535,10 @@ input.text,
 .input.text,
 textarea,
 .textarea {
-  background: #e3e3e8;
+  background: #f4f4f6;
+  color: #3b3b4c;
   border: 0;
   border-radius: 0.5rem;
-  color: #3b3b4c;
   font: inherit;
   padding: 1rem;
   width: 100%;
@@ -555,12 +570,37 @@ textarea,
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  width: 100%;
 }
 
 .input-row {
   display: flex;
   gap: 1rem;
   width: 100%;
+}
+
+.page.index .section.hero .logo {
+  height: 7.5rem;
+  width: auto;
+}
+
+.page.ebook .section.table-of-contents {
+  min-height: 25rem;
+}
+
+.section.hero {
+  background: linear-gradient(135deg, #11053c 0, #09aca2 100%);
+  color: #fdfdfe;
+}
+
+.section.neutral {
+  background: #f4f4f6;
+  color: #3b3b4c;
+}
+
+.section.white {
+  background: #fdfdfe;
+  color: #3b3b4c;
 }
 
 /*# sourceMappingURL=index.css.map */

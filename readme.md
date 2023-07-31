@@ -6,6 +6,15 @@
 
 Responsive medical startup website using HTML + SCSS.
 
+---
+
+
+## Demo
+
+- <a href="https://jenevive.netlify.app" target="_blank">jenevive.netlify.app</a>
+
+---
+
 
 ## Development
 
@@ -25,10 +34,3 @@ Note: This project was created with node 18.16.0 and npm 9.5.1.
 ```bash
   npm start
 ```
-
----
-
-
-## View demo
-
-- <a href="https://jenevive.netlify.app" target="_blank">jenevive.netlify.app</a>

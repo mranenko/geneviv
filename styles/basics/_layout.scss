@@ -4,11 +4,12 @@ body {
 }
 
 main {
-  align-items: center;
+  @include background(color(white), color(black));
   display: flex;
+  flex-direction: column;
 }
 
 main .content {
+  align-items: start;
   gap: 1.5rem;
-  justify-content: center;
 }

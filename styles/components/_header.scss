@@ -17,6 +17,7 @@ header {
   @include background(color(white), color(primary));
   box-shadow: 0 0 1rem 0 rgba(color(black), 0.15);
   height: var(--header-height);
+  z-index: 1;
 }
 
 header .content {
