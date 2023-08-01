@@ -13,7 +13,39 @@
 
 
 .page.ebook {
-  .section.table-of-contents {
+  section.table-of-contents {
     min-height: 25rem;
+    h3 { text-transform: uppercase; }
+
+    .chapters,
+    .grid,
+    .row,
+    .sections {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .chapters {
+      border: solid color(border);
+      border-width: 0 0 1px;
+      gap: 1rem;
+      padding: 0 0 2rem;
+    }
+
+    .grid { gap: 2rem; }
+    .row { gap: 2rem; }
+    .sections { align-items: center; }
+  }
+}
+
+@media (min-width: 50rem) {
+  .page.ebook {
+    section.table-of-contents {
+      .chapters { border-width: 0 0 0 1px; padding: 0 0 2rem 2rem; }
+      .grid { gap: 0; }
+      .row { flex-direction: row; }
+      .sections { align-items: end; width: 20rem; }
+    }
   }
 }
