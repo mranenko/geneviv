@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  background: #f4f4f6;
+  background: #f1f1f3;
   color: #3b3b4c;
   font-family: Glory, sans-serif;
   font-size: 1rem;
@@ -124,7 +124,7 @@ ul li {
 }
 
 hr {
-  border: 0 solid #d8d8df;
+  border: 0 solid #dddde3;
   border-width: 1px 0 0;
   margin: 2rem 0;
 }
@@ -492,7 +492,7 @@ header .nav a {
   width: 100%;
 }
 header .nav a:hover {
-  background: #d8d8df;
+  background: #dddde3;
   color: #3b3b4c;
 }
 header .nav-toggle {
@@ -546,7 +546,7 @@ input.text,
 .input.text,
 textarea,
 .textarea {
-  background: #f4f4f6;
+  background: #e8e8ec;
   color: #3b3b4c;
   border: 0;
   border-radius: 0.5rem;
@@ -630,7 +630,7 @@ main .content {
 }
 
 .section.neutral {
-  background: #f4f4f6;
+  background: #f1f1f3;
   color: #3b3b4c;
 }
 

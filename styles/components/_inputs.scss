@@ -3,7 +3,7 @@ input.text,
 .input.text,
 textarea,
 .textarea {
-  @include background(color(neutral, 1), color(black));
+  @include background(color(neutral, 2), color(black));
   border: 0;
   border-radius: .5rem;
   font: inherit;
