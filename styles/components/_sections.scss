@@ -5,6 +5,12 @@
     color(accent) 100%
   );
   color: color(white);
+  margin-top: #{calc(-1*var(--header-height))};
+  padding-top: var(--header-height);
+
+  .content {
+    padding-top: .5rem;
+  }
 }
 
 .section.neutral {

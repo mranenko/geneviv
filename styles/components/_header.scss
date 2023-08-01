@@ -18,18 +18,32 @@ header {
   @include position(fixed, 0);
   @include size(100%, var(--header-height));
   box-shadow: 0 0 1rem 0 rgba(color(black), 0.15);
+  transition: background .25s, box-shadow .25s, color .25s;
   z-index: 1;
-}
 
-header .content {
-  align-items: center;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: space-between;
-}
+  .content {
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+  }
 
-header .logo {
-  @include size(auto, 2rem);
+  .logo {
+    @include size(10.75rem, 2rem);
+    background-image: url('../../assets/images/logos/jenevive-logo-indigo.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &.ghost {
+    @include background(none, color(white));
+    box-shadow: none;
+
+    .logo {
+      background-image: url('../../assets/images/logos/jenevive-logo-white.svg');
+    }
+  }
 }
 
 
@@ -37,62 +51,71 @@ header .logo {
   navigation
 */
 
-header .nav {
-  @include background(color(neutral), color(white));
-  @include position(fixed, 0, #{calc(-1*var(--header-nav-width))});
-  @include size(#{var(--header-nav-width)}, #{var(--header-nav-height)});
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  padding: #{calc(var(--header-height) + 2rem) 0 0};
-  text-transform: uppercase;
-  transition: right .5s;
-  z-index: 1;
+header {
+  .nav {
+    @include background(color(neutral), color(white));
+    @include position(fixed, 0, #{calc(-1*var(--header-nav-width))});
+    @include size(#{var(--header-nav-width)}, #{var(--header-nav-height)});
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: #{calc(var(--header-height) + 2rem) 0 0};
+    text-transform: uppercase;
+    transition: right .5s;
+    z-index: 1;
 
-  a {
-    padding: .5rem 2rem;
-    width: 100%;
-  }
+    &.active {
+      right: 0;
+    }
 
-  a:hover {
-    @include background(color(neutral, 3), color(black));
-  }
-}
+    a {
+      padding: .5rem 2rem;
+      width: 100%;
+    }
 
-header .nav.active {
-  right: 0;
-}
-
-header .nav-toggle {
-  @include position(fixed, 2rem, 2rem);
-  color: color(primary);
-  font-size: 2rem;
-  transition: color .5s;
-  z-index: 2;
-}
-
-header .nav-toggle.active {
-  color: color(white);
-}
-
-@media (min-width: 50rem) {
-  header .nav,
-  header .nav.active {
-    @include background(none, inherit);
-    @include position(relative);
-    @include size(auto);
-    flex-direction: row;
-    gap: 1.5rem;
-    padding: 0;
-
-    a, a:hover {
-      @include background(none, inherit);
-      padding: 0;
-      width: auto;
+    a:hover {
+      @include background(color(neutral, 3), color(black));
     }
   }
 
-  header .nav-toggle {
-    display: none;
+  .nav-toggle {
+    @include position(fixed, 2rem, 2rem);
+    color: color(primary);
+    font-size: 2rem;
+    transition: color .5s;
+    z-index: 2;
+
+    &.active {
+      color: color(white);
+    }
+  }
+
+  &.ghost .nav-toggle {
+    color: color(white);
+  }
+}
+
+
+@media (min-width: 50rem) {
+  header {
+    .nav,
+    .nav.active {
+      @include background(none, inherit);
+      @include position(relative);
+      @include size(auto);
+      flex-direction: row;
+      gap: 1.5rem;
+      padding: 0;
+
+      a, a:hover {
+        @include background(none, inherit);
+        padding: 0;
+        width: auto;
+      }
+    }
+
+    .nav-toggle {
+      display: none;
+    }
   }
 }
