@@ -319,11 +319,11 @@ hr {
 }
 
 .button.large .label {
-  cursor: inherit;
   display: flex;
   flex-direction: column;
-  font-size: 1.125rem;
   gap: 0.125rem;
+  cursor: inherit;
+  font-size: 1.125rem;
   text-align: left;
 }
 
@@ -346,10 +346,11 @@ hr {
   button row
 */
 .button-row {
-  align-items: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -365,6 +366,7 @@ hr {
 .content {
   display: flex;
   flex-direction: column;
+  gap: 0;
   margin: 0 auto;
   max-width: 75rem;
   padding: var(--content-padding);
@@ -402,9 +404,10 @@ footer .logo {
 }
 footer .nav {
   display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
   font-size: 1.25rem;
   justify-content: center;
-  gap: 1.5rem;
 }
 
 :root {
@@ -435,9 +438,10 @@ header {
   z-index: 1;
 }
 header .content {
-  align-items: center;
+  display: flex;
   flex-direction: row;
   gap: 2rem;
+  align-items: center;
   justify-content: space-between;
 }
 header .logo {
@@ -463,6 +467,9 @@ header.ghost .logo {
 header .nav {
   background: #63637e;
   color: #fdfdfe;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   bottom: auto;
   left: auto;
   position: fixed;
@@ -470,9 +477,6 @@ header .nav {
   top: 0;
   height: var(--header-nav-height);
   width: var(--header-nav-width);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
   padding: calc(var(--header-height) + 2rem) 0 0;
   text-transform: uppercase;
   transition: right 0.5s;
@@ -512,6 +516,9 @@ header.ghost .nav-toggle {
   header .nav.active {
     background: none;
     color: inherit;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
     bottom: auto;
     left: auto;
     position: relative;
@@ -519,8 +526,6 @@ header.ghost .nav-toggle {
     top: auto;
     height: auto;
     width: auto;
-    flex-direction: row;
-    gap: 1.5rem;
     padding: 0;
   }
   header .nav a, header .nav a:hover,
@@ -580,6 +585,7 @@ textarea,
 
 .input-row {
   display: flex;
+  flex-direction: row;
   gap: 1rem;
   width: 100%;
 }
@@ -589,9 +595,9 @@ main {
   color: #3b3b4c;
   display: flex;
   flex-direction: column;
+  gap: 0;
   padding: var(--header-height) 0 0;
 }
-
 main .content {
   align-items: start;
   gap: 1.5rem;
@@ -621,6 +627,7 @@ main .content {
 .page.ebook section.table-of-contents .sections {
   display: flex;
   flex-direction: column;
+  gap: 0;
   width: 100%;
 }
 .page.ebook section.table-of-contents .chapters {

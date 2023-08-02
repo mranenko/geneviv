@@ -4,7 +4,7 @@
 		isScrolling: false,
 
 		setHeaderGhost() {
-			if (window.scrollY > 64) {
+			if (window.scrollY > 32) {
 				this.header.classList.remove('ghost');
 			}
 			else {

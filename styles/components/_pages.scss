@@ -21,8 +21,7 @@
     .grid,
     .row,
     .sections {
-      display: flex;
-      flex-direction: column;
+    @include flex(column);
       width: 100%;
     }
 

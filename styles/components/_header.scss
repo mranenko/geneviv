@@ -22,9 +22,8 @@ header {
   z-index: 1;
 
   .content {
+    @include flex(row, 2rem);
     align-items: center;
-    flex-direction: row;
-    gap: 2rem;
     justify-content: space-between;
   }
 
@@ -54,11 +53,9 @@ header {
 header {
   .nav {
     @include background(color(neutral), color(white));
+    @include flex(column, .5rem);
     @include position(fixed, 0, #{calc(-1*var(--header-nav-width))});
     @include size(#{var(--header-nav-width)}, #{var(--header-nav-height)});
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
     padding: #{calc(var(--header-height) + 2rem) 0 0};
     text-transform: uppercase;
     transition: right .5s;
@@ -101,10 +98,9 @@ header {
     .nav,
     .nav.active {
       @include background(none, inherit);
+      @include flex(row, 1.5rem);
       @include position(relative);
       @include size(auto);
-      flex-direction: row;
-      gap: 1.5rem;
       padding: 0;
 
       a, a:hover {

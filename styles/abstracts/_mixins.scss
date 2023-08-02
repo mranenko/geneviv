@@ -1,6 +1,12 @@
-@mixin background($background, $color: inherit) {
+@mixin background($background, $color: contrast($background)) {
   background: $background;
   color: $color;
+}
+
+@mixin flex($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
 }
 
 @mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {

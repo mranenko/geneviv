@@ -1,11 +1,10 @@
 main {
   @include background(color(white), color(black));
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   padding: var(--header-height) 0 0;
-}
 
-main .content {
-  align-items: start;
-  gap: 1.5rem;
+  .content {
+    align-items: start;
+    gap: 1.5rem;
+  }
 }

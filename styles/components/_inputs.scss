@@ -36,14 +36,11 @@ textarea,
 */
 
 .input-group {
-  display: flex;
-  flex-direction: column;
-  gap: .25rem;
+  @include flex(column, .25rem);
   width: 100%;
 }
 
 .input-row {
-  display: flex;
-  gap: 1rem;
+  @include flex(row, 1rem);
   width: 100%;
 }
