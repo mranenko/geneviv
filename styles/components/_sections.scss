@@ -39,7 +39,7 @@ section.sponsors {
   .content { gap: 2rem; }
 
   .sponsor-logos {
-    @include flex(row, 1rem 5rem);
+    @include flex(row, 1.5rem 5rem);
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;

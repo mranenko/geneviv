@@ -701,7 +701,7 @@ section.sponsors .content {
 section.sponsors .sponsor-logos {
   display: flex;
   flex-direction: row;
-  gap: 1rem 5rem;
+  gap: 1.5rem 5rem;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
