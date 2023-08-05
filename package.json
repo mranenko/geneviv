@@ -8,7 +8,7 @@
     "npm": "9.5.1"
   },
   "scripts": {
-    "sass": "sass --watch styles",
+    "sass": "sass --watch assets/styles",
     "server": "live-server --open=/ --port=20232",
     "start": "npm run sass & npm run server"
   }
