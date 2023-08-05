@@ -115,11 +115,15 @@ small {
 
 ol,
 ul {
-  margin: 0 0 1rem 1.5rem;
+  list-style: none;
 }
 
-ol li,
-ul li {
+ol.list,
+ul.list {
+  margin: 0 0 1rem 1.5rem;
+}
+ol.list li,
+ul.list li {
   margin: 0 0 0.5rem;
 }
 
@@ -662,6 +666,22 @@ main .content {
     width: 20rem;
   }
 }
+/*
+  section backgrounds
+*/
+section.neutral {
+  background: #f1f1f3;
+  color: #3b3b4c;
+}
+
+section.white {
+  background: #fdfdfe;
+  color: #3b3b4c;
+}
+
+/*
+  hero
+*/
 section.hero {
   background: linear-gradient(135deg, #11053c 0, #09aca2 100%);
   color: #fdfdfe;
@@ -672,14 +692,31 @@ section.hero .content {
   padding-top: 0.5rem;
 }
 
-section.neutral {
-  background: #f1f1f3;
-  color: #3b3b4c;
+/*
+  sponsors
+*/
+section.sponsors .content {
+  gap: 2rem;
+}
+section.sponsors .sponsor-logos {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem 5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+section.sponsors .sponsor-logos .logo {
+  height: 3.5rem;
+  width: auto;
 }
 
-section.white {
-  background: #fdfdfe;
-  color: #3b3b4c;
+@media (min-width: 50rem) {
+  section.sponsors .sponsor-logos .logo {
+    height: 4.5rem;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

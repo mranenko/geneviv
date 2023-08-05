@@ -1,3 +1,20 @@
+/*
+  section backgrounds
+*/
+
+section.neutral {
+  @include background(color(neutral, 1), color(black));
+}
+
+section.white {
+  @include background(color(white), color(black));
+}
+
+
+/*
+  hero
+*/
+
 section.hero {
   background: linear-gradient(
     135deg,
@@ -13,10 +30,28 @@ section.hero {
   }
 }
 
-section.neutral {
-  @include background(color(neutral, 1), color(black));
+
+/*
+  sponsors
+*/
+
+section.sponsors {
+  .content { gap: 2rem; }
+
+  .sponsor-logos {
+    @include flex(row, 1rem 5rem);
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .logo { @include size(auto, 3.5rem); }
+  }
 }
 
-section.white {
-  @include background(color(white), color(black));
+@media (min-width: 50rem) {
+  section.sponsors {
+    .sponsor-logos {
+      .logo { @include size(auto, 4.5rem); }
+    }
+  }
 }

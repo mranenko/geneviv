@@ -68,13 +68,15 @@ small {
 
 ol,
 ul {
-  margin: 0 0 1rem 1.5rem;
+  list-style: none;
 }
 
-ol li,
-ul li {
-  margin: 0 0 .5rem;
+ol.list,
+ul.list {
+  margin: 0 0 1rem 1.5rem;
+  li { margin: 0 0 .5rem; }
 }
+
 
 hr {
   border: 0 solid color(border);
