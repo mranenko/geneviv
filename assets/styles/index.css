@@ -446,15 +446,16 @@ header .content {
   flex-direction: row;
   gap: 2rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: stretch;
 }
 header .logo {
   height: 2rem;
-  width: 10.75rem;
-  background-image: url("../../assets/images/logos/jenevive-logo-indigo.svg");
-  background-position: 0 0;
+  width: auto;
+  background-image: url("../../assets/images/logos/geneviv-indigo.svg");
+  background-position: 0 center;
   background-repeat: no-repeat;
   background-size: contain;
+  flex: 1 0;
 }
 header.ghost {
   background: none;
@@ -462,7 +463,7 @@ header.ghost {
   box-shadow: none;
 }
 header.ghost .logo {
-  background-image: url("../../assets/images/logos/jenevive-logo-white.svg");
+  background-image: url("../../assets/images/logos/geneviv-white.svg");
 }
 
 /*
@@ -614,11 +615,17 @@ main .content {
 
 .page.app .logo.pineapple,
 .page.index .logo.pineapple {
-  height: 5rem;
+  height: 4rem;
   width: auto;
-  margin: 0 0 -0.75rem;
 }
 
+@media (min-width: 50rem) {
+  .page.app .logo.pineapple,
+  .page.index .logo.pineapple {
+    height: 5rem;
+    width: auto;
+  }
+}
 .page.ebook section.table-of-contents {
   min-height: 25rem;
 }

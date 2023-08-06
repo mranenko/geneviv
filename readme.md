@@ -1,8 +1,8 @@
 <!--
-<img src="assets/images/screenshots/genevive.png" alt="" style="margin: 0 auto; max-width: 100%;" />
+<img src="assets/images/screenshots/geneviv.png" alt="" style="margin: 0 auto; max-width: 100%;" />
 -->
 
-# Jenevive
+# Geneviv
 
 Responsive medical startup website using HTML + SCSS.
 
@@ -11,7 +11,7 @@ Responsive medical startup website using HTML + SCSS.
 
 ## Demo
 
-- <a href="https://genevive.netlify.app" target="_blank">genevive.netlify.app</a>
+- <a href="https://geneviv.netlify.app" target="_blank">geneviv.netlify.app</a>
 
 ---
 

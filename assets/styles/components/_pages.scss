@@ -6,8 +6,16 @@
 .page.app,
 .page.index {
  .logo.pineapple {
-    @include size(auto, 5rem);
-    margin: 0 0 -.75rem;
+    @include size(auto, 4rem);
+  }
+}
+
+@media (min-width: 50rem) {
+  .page.app,
+  .page.index {
+  .logo.pineapple {
+      @include size(auto, 5rem);
+    }
   }
 }
 
