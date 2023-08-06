@@ -12,7 +12,8 @@
 .content {
   @include flex(column);
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: #{min(75rem, calc(100vw - 2*var(--content-padding)))};
+  overflow-x: hidden;
   padding: var(--content-padding);
   width: 100%;
 }

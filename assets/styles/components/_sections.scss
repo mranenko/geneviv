@@ -2,6 +2,15 @@
   section backgrounds
 */
 
+section.highlight {
+  background: linear-gradient(
+    135deg,
+    color(primary) 0,
+    color(accent) 100%
+  );
+  color: color(white);
+}
+
 section.neutral {
   @include background(color(neutral, 1), color(black));
 }
@@ -52,6 +61,53 @@ section.sponsors {
   section.sponsors {
     .sponsor-logos {
       .logo { @include size(auto, 4.5rem); }
+    }
+  }
+}
+
+
+/*
+  testimonials
+*/
+
+section.testimonials {
+  .avatar {
+    @include size(7rem);
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .description {
+    @include flex(column, 1rem);
+  }
+
+  .testimonial {
+    @include background(color(white), color(black));
+    @include flex(column, 1.5rem);
+    @include size(12.5rem, 28rem);
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem 0 rgba(color(black), .15);
+    padding: 1.5rem;
+  }
+
+  .testimonials {
+    @include flex(row, 1.5rem);
+  }
+}
+
+@media (min-width: 50rem) {
+  section.testimonials {
+    .avatar {
+      @include size(8rem);
+    }
+
+    .testimonial {
+    @include flex(row, 1.5rem);
+      @include size(26.25rem, 15rem);
+    }
+
+    .testimonials {
+      @include flex(row, 2rem);
     }
   }
 }

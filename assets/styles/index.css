@@ -372,7 +372,8 @@ hr {
   flex-direction: column;
   gap: 0;
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: min(75rem, 100vw - 2 * var(--content-padding));
+  overflow-x: hidden;
   padding: var(--content-padding);
   width: 100%;
 }
@@ -676,6 +677,11 @@ main .content {
 /*
   section backgrounds
 */
+section.highlight {
+  background: linear-gradient(135deg, #11053c 0, #09aca2 100%);
+  color: #fdfdfe;
+}
+
 section.neutral {
   background: #f1f1f3;
   color: #3b3b4c;
@@ -723,6 +729,56 @@ section.sponsors .sponsor-logos .logo {
   section.sponsors .sponsor-logos .logo {
     height: 4.5rem;
     width: auto;
+  }
+}
+/*
+  testimonials
+*/
+section.testimonials .avatar {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+section.testimonials .description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+section.testimonials .testimonial {
+  background: #fdfdfe;
+  color: #3b3b4c;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 28rem;
+  width: 12.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem 0 rgba(59, 59, 76, 0.15);
+  padding: 1.5rem;
+}
+section.testimonials .testimonials {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+@media (min-width: 50rem) {
+  section.testimonials .avatar {
+    height: 8rem;
+    width: 8rem;
+  }
+  section.testimonials .testimonial {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    height: 15rem;
+    width: 26.25rem;
+  }
+  section.testimonials .testimonials {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
   }
 }
 
