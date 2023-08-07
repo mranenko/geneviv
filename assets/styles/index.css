@@ -35,6 +35,7 @@
 html,
 body {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -396,7 +397,6 @@ hr {
   gap: 0;
   margin: 0 auto;
   max-width: min(75rem, 100vw);
-  overflow-x: hidden;
   padding: var(--content-padding);
   width: 100%;
 }
