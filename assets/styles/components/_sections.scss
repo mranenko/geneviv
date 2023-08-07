@@ -76,11 +76,8 @@ section.testimonials {
     border-radius: 50%;
     margin: 0 auto;
   }
-
-  .description {
-    @include flex(column, 1rem);
-  }
-
+  .description { @include flex(column, 1rem); }
+  .testimonials { @include flex(row, 1.5rem); }
   .testimonial {
     @include background(color(white), color(black));
     @include flex(column, 1.5rem);
@@ -89,25 +86,15 @@ section.testimonials {
     box-shadow: 0 0 1rem 0 rgba(color(black), .15);
     padding: 1.5rem;
   }
-
-  .testimonials {
-    @include flex(row, 1.5rem);
-  }
 }
 
 @media (min-width: 50rem) {
   section.testimonials {
-    .avatar {
-      @include size(8rem);
-    }
-
+    .avatar { @include size(8rem); }
+    .testimonials { @include flex(row, 2rem); }
     .testimonial {
     @include flex(row, 1.5rem);
       @include size(26.25rem, 15rem);
-    }
-
-    .testimonials {
-      @include flex(row, 2rem);
     }
   }
 }
