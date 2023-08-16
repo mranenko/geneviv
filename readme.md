@@ -1,6 +1,5 @@
-<!--
 <img src="assets/images/screenshots/geneviv.png" alt="" style="margin: 0 auto; max-width: 100%;" />
--->
+
 
 # Geneviv
 
