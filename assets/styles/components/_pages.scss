@@ -7,6 +7,7 @@
 .page.index {
  .logo.pineapple {
     @include size(auto, 4rem);
+    margin: 0 0 .5rem;
   }
 }
 

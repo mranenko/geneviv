@@ -32,10 +32,47 @@ section.hero {
   );
   color: color(white);
   margin-top: #{calc(-1*var(--header-height))};
+  max-height: 100vh;
+  overflow-y: hidden;
   padding-top: var(--header-height);
 
   .content {
-    padding-top: .5rem;
+    @include flex(column-reverse, 1.5rem);
+  }
+
+  .description {
+    @include flex(column, 1.5rem);
+    align-items: start;
+    padding: 0;
+  }
+
+  .mockup {
+    @include size(min(90%, 30rem), auto);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 50rem) {
+  section.hero {
+    .content {
+      @include flex(row, 1.5rem);
+      align-items: center;
+      padding-bottom: 2rem;
+      padding-top: 0;
+    }
+
+    .mockup {
+      @include size(22.5rem, auto);
+      margin-left: -4.5rem;
+    }
+  }
+}
+
+@media (min-width: 60rem) {
+  section.hero {
+    .description {
+      margin: -1rem 0 0;
+    }
   }
 }
 

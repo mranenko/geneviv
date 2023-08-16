@@ -177,6 +177,10 @@ hr {
   flex-wrap: wrap;
 }
 
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
 .inline {
   display: inline;
 }
@@ -263,6 +267,10 @@ hr {
 */
 .ws-normal {
   white-space: normal;
+}
+
+.ws-nowrap {
+  white-space: nowrap;
 }
 
 .ws-pre-line {
@@ -641,6 +649,7 @@ main .content {
 .page.index .logo.pineapple {
   height: 4rem;
   width: auto;
+  margin: 0 0 0.5rem;
 }
 
 @media (min-width: 50rem) {
@@ -722,12 +731,48 @@ section.hero {
   background: linear-gradient(135deg, #11053c 0, #09aca2 100%);
   color: #fdfdfe;
   margin-top: calc(-1 * var(--header-height));
+  max-height: 100vh;
+  overflow-y: hidden;
   padding-top: var(--header-height);
 }
 section.hero .content {
-  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+}
+section.hero .description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 0;
+}
+section.hero .mockup {
+  height: auto;
+  width: min(90%, 30rem);
+  margin: 0 auto;
 }
 
+@media (min-width: 50rem) {
+  section.hero .content {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-top: 0;
+  }
+  section.hero .mockup {
+    height: auto;
+    width: 22.5rem;
+    margin-left: -4.5rem;
+  }
+}
+@media (min-width: 60rem) {
+  section.hero .description {
+    margin: -1rem 0 0;
+  }
+}
 /*
   sponsors
 */
