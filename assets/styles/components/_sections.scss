@@ -78,7 +78,7 @@ section.feature {
   }
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 40rem) {
   section.feature {
     > .grid { @include flex(row, 2rem); }
     &.neutral > .grid { flex-direction: row-reverse; }

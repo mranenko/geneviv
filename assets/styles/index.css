@@ -786,7 +786,7 @@ section.feature .title i {
   justify-content: center;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 40rem) {
   section.feature > .grid {
     display: flex;
     flex-direction: row;
