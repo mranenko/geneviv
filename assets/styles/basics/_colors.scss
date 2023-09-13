@@ -23,7 +23,7 @@
 */
 
 $color-indigo: #11053c;
-$color-teal: #09aca2;
+$color-teal: #008079;
 $color-slate: #63637e;
 
 
@@ -33,9 +33,13 @@ $color-slate: #63637e;
 
 $colors: (
   primary: $color-indigo,
-  accent: $color-teal,
   black: shade($color-slate, 40%),
   white: tint($color-slate, 99%),
+
+  accent: (
+    1: tint($color-teal, 40%),
+    2: $color-teal,
+  ),
 
   neutral: (
     1: tint($color-slate, 91%),
@@ -55,6 +59,7 @@ $colors: (
   $value: $colors;
 
   @if length($keys) == 1 {
+    @if nth($keys, 1) == accent { @return color(accent, 2); }
     @if nth($keys, 1) == neutral { @return color(neutral, 5); }
   }
 

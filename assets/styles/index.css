@@ -710,7 +710,7 @@ main .content {
   section backgrounds
 */
 section.highlight {
-  background: linear-gradient(135deg, #11053c 0, #09aca2 100%);
+  background: linear-gradient(135deg, #11053c 0, #66b3af 100%);
   color: #fdfdfe;
 }
 
@@ -728,7 +728,7 @@ section.white {
   hero
 */
 section.hero {
-  background: linear-gradient(135deg, #11053c 0, #09aca2 100%);
+  background: linear-gradient(135deg, #11053c 0, #66b3af 100%);
   color: #fdfdfe;
   margin-top: calc(-1 * var(--header-height));
   max-height: 100vh;
